@@ -1,7 +1,7 @@
 
 import { connect } from 'cloudflare:sockets';
 
-let userID = 'workersPro';
+let userID = '';
 let proxyIP = '';
 let DNS64Server = '';
 //let sub = '';
@@ -117,8 +117,7 @@ export default {
             const url = new URL(request.url);
             if (!upgradeHeader || upgradeHeader !== 'websocket') {
                 if (env.ADD) addresses = await 整理(env.ADD);
-                // if (env.ADDAPI) addressesapi = await 整理(env.ADDAPI);
-                addressesapi = await 整理('https://github.com/yingying77/Senflare-IP/blob/main/Senflare-Pro.txt');
+                if (env.ADDAPI) addressesapi = await 整理(env.ADDAPI);
                 if (env.ADDNOTLS) addressesnotls = await 整理(env.ADDNOTLS);
                 if (env.ADDNOTLSAPI) addressesnotlsapi = await 整理(env.ADDNOTLSAPI);
                 if (env.ADDCSV) addressescsv = await 整理(env.ADDCSV);
